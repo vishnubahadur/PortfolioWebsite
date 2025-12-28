@@ -4,7 +4,7 @@ import AboutUs from "../assets/AboutUs.json"
 
 const About = () => {
   return (
-    <div id='about' className='h-screen flex py-26 justify-center items-center gap-10 px-5 max-sm:flex-col max-sm:gap-5'>
+    <div id='about' className='h-screen flex py-26 justify-center items-center gap-10 px-5 m-10 max-sm:m-1 max-sm:flex-col max-sm:gap-5'>
         <div className='bg-neo-primary rounded-2xl w-1/2 max-sm:w-full'>
             <Lottie animationData={AboutUs} loop={true}/>
         </div>

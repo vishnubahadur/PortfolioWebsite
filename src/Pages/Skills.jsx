@@ -1,38 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skills } from "../Constants/Constant";
-import { div } from "framer-motion/client";
 
 const Skills = () => {
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 60 },
+    show: { opacity: 1, transition: { duration: 0.2 } },
+  };
   return (
-    <div id="skills" className="h-screen py-24">
-      <motion.div className="text-center">
-        <span>
-          <h1 className="text-xl font-extrabold  rounded-full px-3 py-1 bg-neo-primary inline-block">
-            Technical Expertise
-          </h1>
-        </span>
-        <h1 className="text-4xl gradient-text font-extrabold py-3">My Skills</h1>
-
-      </motion.div> 
-
-      <div className="mt-10 text-center">
-        <h1>Front-end</h1>
-        <motion.div 
-        className="flex justify-center items-start gap-5 mt-3 max-sm:flex-col max-sm:gap-2 max-sm:items-center max-sm:justify-center"
+    <section id="skills" className="py-24">
+      <div className=" mx-auto px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false }}
+          className="text-center mb:18 max-sm:mb-16"
         >
-          {skills.map((items)=>(
-      
-              <div className="p-2 rounded-2xl bg-neo-primary flex justify-center items-end pb-2 max-sm:text-sm">
+          <span className="inline-block px-4 glass text-neo-secondary font-medium  rounded-full">
+            Skills
+          </span>
+        </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
+          className="flex flex-wrap justify-center items-center gap-10 max-sm:gap-6"
+        >
+            {skills.filter((items)=>items.category === "front-end").map((items) => (
+              <motion.div
+                variants={cardVariants}
+                key={items.id}
+                className="w-60 h-20 flex justify-center items-center gap-2 max-sm:h-60 rounded-2xl overflow-hidden glass transition-all duration-500"
+              >
+                {items.icon && <items.icon className="w-4 h-4 text-white inline-block"/>}
                 <h1 className="text-white">{items.title}</h1>
-           </div>
-           
-          ))}
+               
+              </motion.div>
+            ))}
+    
+            {skills.filter((items)=>items.category === "backend").map((items) => (
+              <motion.div
+                variants={cardVariants}
+                key={items.id}
+                className="w-60 h-20 flex justify-center items-center gap-2 max-sm:h-60 rounded-2xl overflow-hidden glass transition-all duration-500"
+              >
+                {items.icon && <items.icon className="w-4 h-4 text-white inline-block"/>}
+                <h1 className="text-white">{items.title}</h1>
+              </motion.div>
+            ))}
         </motion.div>
       </div>
-                 
-              
-    </div>
+    </section>
   );
 };
 

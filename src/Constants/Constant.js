@@ -9,9 +9,9 @@ import project4Img from '../assets/project4.avif';
 import project5Img from '../assets/project5.avif';
 import project6Img from '../assets/project6.avif';
 import project7Img from '../assets/project7.avif';
-import { FiCpu, FiLayers, FiMonitor, FiSettings, FiSmartphone } from 'react-icons/fi';
-import { title } from 'framer-motion/client';
-import { progress } from 'framer-motion';
+import {FaReact} from 'react-icons/fa';
+
+
 
 
 
@@ -94,35 +94,75 @@ export const skills = [
       id: 1,
       category:"front-end",
       title:"Javascript",
-      icon:"",
+      icon:FaReact,
       progress:60,
     },
      {
       id: 2,
       category:"front-end",
       title:"React",
-      icon:"",
+      icon:FaReact,
       progress:60,
     },
      {
       id: 3,
       category:"front-end",
       title:"Tailwind",
-      icon:"",
+      icon:FaReact,
       progress:60,
     },
      {
       id: 4,
       category:"front-end",
       title:"CSS",
-      icon:"",
+      icon:FaReact,
       progress:60,
     },
-     {
-      id: 5,
-      category:"front-end",
-      title:"ThreeJS",
-      icon:"",
-      progress:60,
-    }
+     
+    
+
+    {
+        id: 5,
+        category:"backend",
+        title:"NodeJS",
+        icon:FaReact,
+        progress:60,
+      },
+      {
+        id: 6,
+        category:"backend",
+        title:"Express",
+        icon:FaReact,
+        progress:60,
+      },    
+      {
+        id: 7,
+        category:"backend",
+        title:"MongoDB",
+        icon:FaReact,
+        progress:60,
+      },
+      {
+        id: 8,
+        category:"backend",
+        title:"MySQL",
+        icon:FaReact,
+        progress:60,
+      },
+      {
+        id: 10,
+        category:"backend",
+        title:"Mongoose",
+        icon:FaReact,
+        progress:60,
+      },
+      {
+        id: 11,
+        category:"backend", 
+        title:"REST API",
+        icon:FaReact,
+        progress:60,
+      },
+     
+    
   ];
