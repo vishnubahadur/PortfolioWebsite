@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { skills } from "../Constants/Constant";
+import { div } from "framer-motion/client";
 
 const Skills = () => {
   return (
@@ -13,6 +15,23 @@ const Skills = () => {
         <h1 className="text-4xl gradient-text font-extrabold py-3">My Skills</h1>
 
       </motion.div> 
+
+      <div className="mt-10 text-center">
+        <h1>Front-end</h1>
+        <motion.div 
+        className="flex justify-center items-start gap-5 mt-3 max-sm:flex-col max-sm:gap-2 max-sm:items-center max-sm:justify-center"
+        >
+          {skills.map((items)=>(
+      
+              <div className="p-2 rounded-2xl bg-neo-primary flex justify-center items-end pb-2 max-sm:text-sm">
+                <h1 className="text-white">{items.title}</h1>
+           </div>
+           
+          ))}
+        </motion.div>
+      </div>
+                 
+              
     </div>
   );
 };

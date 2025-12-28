@@ -10,6 +10,8 @@ import project5Img from '../assets/project5.avif';
 import project6Img from '../assets/project6.avif';
 import project7Img from '../assets/project7.avif';
 import { FiCpu, FiLayers, FiMonitor, FiSettings, FiSmartphone } from 'react-icons/fi';
+import { title } from 'framer-motion/client';
+import { progress } from 'framer-motion';
 
 
 
@@ -90,32 +92,37 @@ export const projects = [
 export const skills = [
     {
       id: 1,
-      title: "UI/UX Design",
-      description: "User research, wireframing, prototyping, interaction design",
-      icon: FiMonitor,
+      category:"front-end",
+      title:"Javascript",
+      icon:"",
+      progress:60,
     },
-    {
+     {
       id: 2,
-      title: "Frontend Dev",
-      description: "React, Vue, Next.js, Tailwind, GSAP, Three.js",
-      icon: FiCpu,
+      category:"front-end",
+      title:"React",
+      icon:"",
+      progress:60,
     },
-    {
+     {
       id: 3,
-      title: "Backend Dev",
-      description: "Node.js, Express, MongoDB, GraphQL, Firebase",
-      icon: FiLayers ,
+      category:"front-end",
+      title:"Tailwind",
+      icon:"",
+      progress:60,
     },
-    {
+     {
       id: 4,
-      title: "Mobile Dev",
-      description: "React Native, Flutter, SwiftUI, Kotlin",
-      icon: FiSmartphone ,
+      category:"front-end",
+      title:"CSS",
+      icon:"",
+      progress:60,
     },
-    {
+     {
       id: 5,
-      title: "DevOps",
-      description: "Docker, AWS, CI/CD, Serverless, Microservices",
-      icon: FiSettings,
-    },
+      category:"front-end",
+      title:"ThreeJS",
+      icon:"",
+      progress:60,
+    }
   ];

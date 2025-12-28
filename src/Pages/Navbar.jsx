@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <motion.span
             whileHover={{ scale: 1.1 }}
-            className="text-2xl font-bold cursor-pointer max-sm:px-2"
+            className="text-2xl font-bold text-white cursor-pointer max-sm:px-2"
           >
             <a href="home"> Vishnu Bahadur</a>
           </motion.span>
