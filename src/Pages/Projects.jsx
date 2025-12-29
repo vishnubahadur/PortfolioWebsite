@@ -16,7 +16,7 @@ const Projects = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 60 },
-    show: { opacity: 1, transition: { duration: 0.2} },
+    show: { opacity: 1, transition: { duration: 0.2 } },
   };
 
   const linkVariants = {
@@ -43,7 +43,9 @@ const Projects = () => {
           <span className="inline-block px-4 glass text-neo-secondary font-medium  rounded-full">
             Selected Work
           </span>
-          <h2 className="gradient-text font-extrabold text-4xl py-4">Innovative Projects </h2>
+          <h2 className="gradient-text font-extrabold text-4xl py-4">
+            Innovative Projects{" "}
+          </h2>
         </motion.div>
 
         <motion.div
@@ -54,38 +56,40 @@ const Projects = () => {
           className="flex flex-wrap justify-center items-center gap-10 max-sm:gap-6"
         >
           {projects.map((item) => (
-            
             <motion.div
               variants={cardVariants}
               key={item.id}
               className="w-120 h-100 max-sm:h-60 rounded-2xl overflow-hidden glass transition-all duration-500"
             >
               <motion.img
-                
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover z-10"
                 whileHover={{ scale: 1.12 }}
                 transition={{ duration: 0.8 }}
               />
-              <motion.div 
-        
-                className="absolute bottom-0 p-10 max-sm:p-2 w-full bg-neo-dark"
-              >
-                <span className="rounded-full border-2 border-amber-50 px-2 bg-neo-primary">{item.category}</span>
-                <h1>{item.title}</h1>
-                <p>{item.description}</p>
-                
-              </motion.div>
-
+              <div className=" absolute flex justify-between bottom-0 p-8 max-sm:p-2 w-full bg-neo-dark">
+                <div className="w-1/2">
+                  <h1 className="text-lg font-bold gradient-text">{item.title}</h1>
+                  <p className="text-sm">{item.description}</p>
+                </div>
+                <div>
+                  <motion.a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block rounded-2xl glass text-sm px-2 "
+                  >
+                    View Project
+                  </motion.a>
+                </div>
+              </div>
             </motion.div>
-
-
           ))}
         </motion.div>
-        
       </div>
-      
     </section>
   );
 };

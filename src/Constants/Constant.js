@@ -150,13 +150,6 @@ export const skills = [
         progress:60,
       },
       {
-        id: 10,
-        category:"backend",
-        title:"Mongoose",
-        icon:FaReact,
-        progress:60,
-      },
-      {
         id: 11,
         category:"backend", 
         title:"REST API",

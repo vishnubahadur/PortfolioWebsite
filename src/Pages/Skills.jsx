@@ -16,50 +16,52 @@ const Skills = () => {
     show: { opacity: 1, transition: { duration: 0.2 } },
   };
   return (
-    <section id="skills" className="py-24">
-      <div className=" mx-auto px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: false }}
-          className="text-center mb:18 max-sm:mb-16"
-        >
-          <span className="inline-block px-4 glass text-neo-secondary font-medium  rounded-full">
-            Skills
-          </span>
-        </motion.div>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.3 }}
-          className="flex flex-wrap justify-center items-center gap-10 max-sm:gap-6"
-        >
-            {skills.filter((items)=>items.category === "front-end").map((items) => (
-              <motion.div
-                variants={cardVariants}
-                key={items.id}
-                className="w-60 h-20 flex justify-center items-center gap-2 max-sm:h-60 rounded-2xl overflow-hidden glass transition-all duration-500"
-              >
-                {items.icon && <items.icon className="w-4 h-4 text-white inline-block"/>}
-                <h1 className="text-white">{items.title}</h1>
-               
-              </motion.div>
-            ))}
-    
-            {skills.filter((items)=>items.category === "backend").map((items) => (
-              <motion.div
-                variants={cardVariants}
-                key={items.id}
-                className="w-60 h-20 flex justify-center items-center gap-2 max-sm:h-60 rounded-2xl overflow-hidden glass transition-all duration-500"
-              >
-                {items.icon && <items.icon className="w-4 h-4 text-white inline-block"/>}
-                <h1 className="text-white">{items.title}</h1>
-              </motion.div>
-            ))}
-        </motion.div>
+    <section id="skills" className="py-24 ">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl text-center mx-auto">
+        <h2 className="text-3xl gradient-text font-extrabold mb-5 rounded-full glass inline-block px-5 py-2">
+          Technical Skills
+        </h2>
+        <h1 className="text-2xl font-bold">My Skills</h1>
       </div>
+      <motion.div
+        variants={containerVariants}
+        inital="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+        className="flex justify-center items-center gap-15 max-sm:flex-col mt-10 px-5 max-sm:gap-5"
+      >
+        <div className="flex flex-col glass h-[60vh] w-[30vw] p-10 rounded-2xl max-sm:w-full max-sm:m-0">
+          <h1 className="text-2xl gradient-text inline-block font-extrabold mb-5">Front-end</h1>
+          <div>
+            {skills
+              .filter((skill) => skill.category === "front-end")
+              .map((skill, index) => (
+                <motion.div key={index} variants={cardVariants}>
+                  <div>
+                    <h3 className="text-xl font-semibold">{skill.title}</h3>
+                    <progress value={skill.progress} max={100} className="w-full h-1" />
+                  </div>
+                </motion.div>
+              ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col glass h-[60vh] w-[30vw] p-10 rounded-2xl max-sm:w-full max-sm:m-0 ">
+          <h1 className="text-2xl gradient-text inline-block font-extrabold mb-5">Backend</h1>
+          <div>
+            {skills
+              .filter((skill) => skill.category === "backend")
+              .map((skill, index) => (
+                <motion.div key={index} variants={cardVariants}>
+                  <div>
+                    <h3 className="text-xl font-semibold">{skill.title}</h3>
+                    <progress value={skill.progress} max={100} className="w-full h-1" />
+                  </div>
+                </motion.div>
+              ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
