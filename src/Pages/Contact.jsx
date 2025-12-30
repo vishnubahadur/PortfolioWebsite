@@ -5,52 +5,61 @@ import whatsapp from "../assets/whatsapp.jpeg";
 import Lottie from "lottie-react";
 import QR from "../assets/QR.png";
 import contactUs from "../assets/contactUS.json";
+import LinkedIn from "../assets/LinkedIn.png";
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 h-screen">
-      <div className=" mx-auto px-4 sm:px-6">
+    <section id="contact" className="py-24 h-screen max-sm:py-0">
+      <div className="px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 40 }}   
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false }}
-          className="text-center  max-sm:mb-16"
+          className="text-center max-sm:mb-16"
         >
-          <span className="inline-block text-4xl px-4 glass gradient-text font-medium  rounded-full">
+          <span className="inline-block text-4xl px-4 glass gradient-text font-medium  rounded-full max-sm:text-xl">
             Contact
           </span>
-          <h1 className="text-3xl font-bold text-white mt-6 mb-4">
+          <h1 className="text-3xl font-bold text-white mt-6">
             Get in touch with me
           </h1>
 
-          <div className="flex gap-5 mt-10 max-sm:flex-col">
+          <div className="flex flex-row-reverse gap-5 mt-10 max-sm:flex-col">
             <Lottie
               animationData={contactUs}
               loop={true}
-              className="bg-neo-primary rounded-4xl w-1/2 h-[60vh] max-sm:w-full"
+              className="bg-neo-primary/60 rounded-2xl w-1/2 max-sm:w-full"
             />
             <div className="flex flex-col gap-5 max-sm:gap-2">
-              <div className="flex justify-center gap-15 max-sm:w-full max-sm:flex-wrap max-sm:gap-1">
+              <div className="flex justify-center gap-15 max-sm:w-full max-sm:flex-wrap max-sm:gap-5">
+                <a href="https://github.com/vishnubahadur" target="_blank" rel="noopener noreferrer">
                 <img
                   src={QR}
-                  alt="QR Code"
+                  alt="GitHub"
                   className="w-30 h-30 mx-auto mb-5 rounded-2xl"
                 />
+                </a>
+                <a href="http://www.instagram.com/vishnu_0820" target="_blank" rel="noopener noreferrer">
                 <img
                   src={instagram}
                   alt="QR Code"
                   className="w-30 h-30 mx-auto mb-5 rounded-2xl"
                 />
+                </a>
+                <a href="https://wa.me/qr/KFNGGVMIXTOQN1" target="_blank" rel="noopener noreferrer">
                 <img
                   src={whatsapp}
                   alt="QR Code"
                   className="w-30 h-30 mx-auto mb-5 rounded-2xl"
                 />
+                </a>
+                <a href="https://www.linkedin.com/in/vishnu-bahadur-b25687184/" target="_blank" rel="noopener noreferrer">
                 <img
-                  src={whatsapp}
+                  src={LinkedIn}
                   alt="QR Code"
-                  className="w-30 h-30 mx-auto mb-5 rounded-2xl"
+                  className="w-30 h-30 mx-auto mb-5 rounded-2xl bg-white"
                 />
+                </a>
               </div>
               <h1 className="text-xl font-bold">Scan to Connect</h1>
               <p className="text-2xl italic font-bold">OR</p>

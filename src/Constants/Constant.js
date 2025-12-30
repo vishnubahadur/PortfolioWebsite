@@ -1,14 +1,9 @@
 import { FaDribbble, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import brightMatterImg from '../assets/Brigthmatter.png'
-import brightImg from '../assets/bright.png'
-import profileImg from '../assets/profile.avif';
-import project1Img from '../assets/project1.avif';
-import project2Img from '../assets/project2.avif';
-import project3Img from '../assets/project3.avif';
-import project4Img from '../assets/project4.avif';
-import project5Img from '../assets/project5.avif';
-import project6Img from '../assets/project6.avif';
-import project7Img from '../assets/project7.avif';
+
+import project1Img from '../assets/project1.png';
+import project2Img from '../assets/project2.png';
+import project3Img from '../assets/project3.png';
+import project4img from '../assets/project4.jpg';
 import {FaReact} from 'react-icons/fa';
 
 
@@ -18,16 +13,12 @@ import {FaReact} from 'react-icons/fa';
 
 
 export const assets = {
-    brightMatterImg,
-    brightImg,
-    profileImg,
     project1Img,
     project2Img,
     project3Img,
-    project4Img,
-    project5Img,
-    project6Img,
-    project7Img,
+    project4img
+  
+
 }
 
 export const navItems = [
@@ -48,43 +39,40 @@ export const socialPlatforms = [
 export const projects = [ 
     {
         id: 1,
-        title: "NeoCommerce Platform",
-        description: "Next-gen e-commerce with AR product visualization",
-        category: "WEB APP",
+        title: "Lion's Share",
+        description: "A crypto exchange platform with attractive UI/UX built with vanilla JS",
         color: "primary",
         image: project1Img,
-        link: '#',
-        youtube: '#'
+        link: 'https://vishnubahadur.github.io/Lion-s-Share/',
+      
     },
     {
         id: 2,
-        title: "Fitness AR Companion",
-        description: "AI-powered workout tracking with motion capture",
-        category: "MOBILE APP",
+        title: "ShootBall",
+        description: "An aim training game to improve your reflexes and hand-eye coordination. Purely built using HTML, CSS, and JavaScript.",
         color: "accent",
         image:project2Img,
-        link: '#',
-        youtube: '#'
+        link: 'https://vishnubahadur.github.io/ShootingGame/',
     },
     {
         id: 3,
-        title: "Data Visualization Suite",
-        description: "Real-time 3D data representation and analytics",
-        category: "DASHBOARD",
+        title: "GTA-V6 Landing",
+        description: "Showing craze for games with cool animation and design, built using React, Tailwind CSS and Gsap",
         color: "secondary",
         image:project3Img,
-        link: '#',
-        youtube: '#'
+        link: 'https://gtavi-lading-page.vercel.app/',
+       
     },
     {
         id: 4,
-        title: "NFT Marketplace",
-        description: "Decentralized platform for digital collectibles",
+        title: "Socially",
+        description: "A chat application built using PHP and MySQL with real-time messaging and user authentication.",
+        image:project4img,
         category: "WEB3",
         color: "primary",
-        image:project4Img,
-        link: '#',
-        youtube: '#'
+      
+        link: 'https://github.com/vishnubahadur/Socially',
+        
     },
     
 ];
@@ -135,13 +123,7 @@ export const skills = [
         icon:FaReact,
         progress:60,
       },    
-      {
-        id: 7,
-        category:"backend",
-        title:"MongoDB",
-        icon:FaReact,
-        progress:60,
-      },
+  
       {
         id: 8,
         category:"backend",

@@ -23,9 +23,9 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="w-1/2  relative flex justify-center bg-neo-primary/40 border-b-2 shadow-2xl shadow-neo-primary/50 rounded-full max-sm:mt-24 max-sm:ml-15">
+        <div className="w-1/2  relative flex justify-center  bg-neo-primary/40 border-b-2 shadow-2xl shadow-neo-primary/50 rounded-full max-sm:mt-24 max-sm:ml-25">
           <Lottie
-            className="inline-block w-sm " 
+            className="inline-block w-sm" 
             animationData={robotHi}
             loop={true}
           />

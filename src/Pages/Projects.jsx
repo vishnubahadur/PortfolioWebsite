@@ -40,7 +40,7 @@ const Projects = () => {
           viewport={{ once: false }}
           className="text-center mb:18 max-sm:mb-16"
         >
-          <span className="inline-block px-4 glass text-neo-secondary font-medium  rounded-full">
+          <span className=" text-2xl inline-block px-4 glass text-neo-secondary font-medium rounded-full max-sm:text-xl">
             Selected Work
           </span>
           <h2 className="gradient-text font-extrabold text-4xl py-4">
@@ -53,7 +53,7 @@ const Projects = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
-          className="flex flex-wrap justify-center items-center gap-10 max-sm:gap-6"
+          className="flex flex-wrap justify-center items-center gap-10 max-sm:gap-6 "
         >
           {projects.map((item) => (
             <motion.div
@@ -68,22 +68,28 @@ const Projects = () => {
                 whileHover={{ scale: 1.12 }}
                 transition={{ duration: 0.8 }}
               />
-              <div className=" absolute flex justify-between bottom-0 p-8 max-sm:p-2 w-full bg-neo-dark">
-                <div className="w-1/2">
+              <div className=" absolute flex flex-col justify-between gap-5 bottom-0 p-8 max-sm:p-2 w-full bg-neo-dark max-sm:gap-2 max-sm:bg-neo-dark/70">
+             
                   <h1 className="text-lg font-bold gradient-text">{item.title}</h1>
-                  <p className="text-sm">{item.description}</p>
-                </div>
-                <div>
-                  <motion.a
+                  
+            
+                <div className="flex flex-col gap-3 max-sm:gap-2">
+                  <p className="text-sm ">{item.description}</p>
+
+                  <span className="max-sm:mb-2"> 
+<motion.a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     variants={linkVariants}
                     whileHover="hover"
-                    className="inline-block rounded-2xl glass text-sm px-2 "
+                    className=" rounded-2xl glass text-sm px-3 p-2 font-medium"
                   >
                     View Project
-                  </motion.a>
+                  </motion.a>                    
+                    
+                  </span>
+                  
                 </div>
               </div>
             </motion.div>
