@@ -83,7 +83,7 @@ export const skills = [
       category:"front-end",
       title:"Javascript",
       icon:FaReact,
-      progress:60,
+      progress:80,
     },
      {
       id: 2,
@@ -97,14 +97,14 @@ export const skills = [
       category:"front-end",
       title:"Tailwind",
       icon:FaReact,
-      progress:60,
+      progress:70,
     },
      {
       id: 4,
       category:"front-end",
       title:"CSS",
       icon:FaReact,
-      progress:60,
+      progress:75,
     },
      
     
@@ -114,14 +114,14 @@ export const skills = [
         category:"backend",
         title:"NodeJS",
         icon:FaReact,
-        progress:60,
+        progress:65,
       },
       {
         id: 6,
         category:"backend",
         title:"Express",
         icon:FaReact,
-        progress:60,
+        progress:50,
       },    
   
       {
@@ -129,14 +129,14 @@ export const skills = [
         category:"backend",
         title:"MySQL",
         icon:FaReact,
-        progress:60,
+        progress:80,
       },
       {
         id: 11,
         category:"backend", 
         title:"REST API",
         icon:FaReact,
-        progress:60,
+        progress:75,
       },
      
     

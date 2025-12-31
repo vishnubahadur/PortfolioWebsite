@@ -5,7 +5,7 @@ import whatsapp from "../assets/whatsapp.jpeg";
 import Lottie from "lottie-react";
 import QR from "../assets/QR.png";
 import contactUs from "../assets/contactUS.json";
-import LinkedIn from "../assets/LinkedIn.png";
+import LinkedIn from "../assets/Linkedin.png";
 const Contact = () => {
   return (
     <section id="contact" className="py-24 h-screen max-sm:py-0">
